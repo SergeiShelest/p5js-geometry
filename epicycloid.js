@@ -11,7 +11,7 @@ function setup() {
 	sliderRange(0, 500, 0.1)
 	guiOptions.addGlobals("r")
 	sliderRange(0, 1000, 0.0001)
-	guiOptions.addGlobals("phMax")
+	guiOptions.addGlobals("phMax_")
 
 	guiVisual = createGui("Visual")
 	guiVisual.setPosition(10, 210);
@@ -32,7 +32,7 @@ var c = 1
 var R = 100
 var r = 100
 var ph = 0
-var phMax = 6.28
+var phMax_ = 6.28
 
 var enablePoints = false
 var enableCircle1 = true
@@ -63,11 +63,11 @@ function draw() {
 	let x1 
 	let y1
 
-	let max = phMax
+	let max = phMax_
 
 	if (enableAnim) {
 		c = (c + 0.01 * (deltaTime / 100)) % 1
-		max = phMax * c
+		max = phMax_ * c
 	}
 
 
